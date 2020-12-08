@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/chamindac/RedisServiceClientDemo/issues"
   },
-  "homepage": "https://github.com/chamindac/RedisServiceClientDemo#readme"
+  "homepage": "https://github.com/chamindac/RedisServiceClientDemo#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6"
+  }
 }
