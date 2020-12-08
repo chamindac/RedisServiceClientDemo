@@ -1,0 +1,9 @@
+on: [workflow_dispatch]
+
+jobs:
+  # Name for the container job
+  container-job:
+    # Runner for the container job. Containers have to run on Linux
+    runs-on: ubuntu-latest
+    # We are using a node container image from doker hub to run the JavaScript
+    container: node:10.18-jessie
