@@ -32,7 +32,7 @@ redisClient.hget('spanish', 'red', (err, value) => {
  });
 
 redisClient.hkeys("german", function (err, germanWords) {
-    console.log(replies.length + " germanWords:");
+    console.log(germanWords.length + " germanWords:");
     germanWords.forEach(function (germanWord, i) {
         console.log("    " + i + ": " + germanWord);
     });
