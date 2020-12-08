@@ -19,7 +19,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
         ports:
-          # Mapping port 6379 on service container to the host (runner machine) 
+          # Mapping port 6379 on service container to the host (runner machine)
 	  # to enable the job to access the Redis service contianer
           - 6379:6379
 
