@@ -36,7 +36,7 @@ redisClient.hkeys("german", function (err, germankeys) {
     germankeys.forEach(function (germankey, i) {
         redisClient.hget('spanish', germankey, (err, value) => {
           if (err) console.log(err);
-          else console.log("    " + i + "Gerrman word for: " + germankey + " is: " + value)
+          else console.log("    " + i + "German word for: " + germankey + " is: " + value)
          });
     });
     redisClient.quit();
