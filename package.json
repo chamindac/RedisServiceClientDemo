@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/chamindac/RedisServiceClientDemo#readme",
   "dependencies": {
-    "@actions/core": "^1.2.6"
+    "redis": "^3.0.2"
   }
 }
