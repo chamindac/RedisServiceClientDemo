@@ -37,7 +37,8 @@ jobs:
       run: node redisclient.js
       # Environment variable are passed to JavaScript to create Redis client
       env:
-        # As the host name service container name(label) is passed
-        REDIS_HOST: redis
+        # now need to access Redis service continaer via localhost as port is mapped to runner machine
+        # and the job and Redis service container communication is no longer container to container
+        REDIS_HOST: localhost
         # The default Redis port is passed to create the redis client
         REDIS_PORT: 6379
