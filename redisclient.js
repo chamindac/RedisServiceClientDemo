@@ -31,10 +31,13 @@ redisClient.hget('spanish', 'red', (err, value) => {
   else console.log(value);
  });
 
-redisClient.hkeys("german", function (err, germanWords) {
-    console.log(germanWords.length + " germanWords:");
-    germanWords.forEach(function (germanWord, i) {
-        console.log("    " + i + ": " + germanWord);
+redisClient.hkeys("german", function (err, germankeys) {
+    console.log(germankeys.length + " germanWords:");
+    germankeys.forEach(function (germankey, i) {
+        redisClient.hget('spanish', germankey, (err, value) => {
+          if (err) console.log(err);
+          else console.log("    " + i + "Gerrman word for: " + germankey + " is: " + value)
+         });
     });
     redisClient.quit();
 });
